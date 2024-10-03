@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>月幕 MOON LIKE | online shop</title>
+	<%- include('./layout/head'); -%>
+</head>
+
+<body>
+	<%- include('./layout/header'); -%>
+
+		<!-- 請刪除main中間資料之後開始開發 -->
+		<main>
+			<!-- banner區塊開發中 -->
+			<section class="container">
+				<div class="p-5 mb-4 rounded-3">
+					<picture>
+						<source media="(min-width: 992)" srcset="../assets/images/banner2.png">
+						<img src="../assets/images/banner2.png" alt="" class="w-100">
+					</picture>
+				</div>
+			</section>
+
+		</main>
+
+
+		<!-- 以下資訊請注意保留 -->
+		<%- include('./layout/footer'); -%>
+			<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+			<script type="module" src="../main.js"></script>
+
+</body>
+
+</html>
