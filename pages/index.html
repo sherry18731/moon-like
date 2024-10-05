@@ -12,41 +12,289 @@
 <body>
   <%- include('./layout/header'); -%>
 
-    <!-- 請刪除main中間資料之後開始開發 -->
-    <main>
-      <h1 class="bg-primary">title</h1>
-      <h2 class="text-gray-500">這邊是一些測試的標籤，參考用</h2>
-      <p class="fs-l mb-12">Lorem ipsum dolor <tt class="text-primary-700">sit amet consectetur</tt> adipisicing elit.
-        Molestiae
-        obcaecati
-        corrupti nemo voluptatibus
-        iusto nam
-        adipisci debitis eum neque ad? Porro, facere quibusdam? Recusandae repellendus odit praesentium quidem,
-        reiciendis
-        corrupti.</p>
-
-      <section class="bg-primary-200 py-20">
-        <h6>Lorem ipsum dolor sit amet.</h6>
-        <a href="#">link</a>
-        <button class="btn btn-primary-400 px-6">btn</button>
-        <i class="bi bi-line fs-1"></i>
-        <span class="material-symbols-outlined">
-          favorite
-        </span>
-      </section>
-      <div class="d-flex justify-content-center">
-        <p class="fs-r-3 w-50 py-5">Lorem ipsum dolor, sit amet consectetur. Repellat?</p>
-      </div>
-
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="../assets/images/banner.png" alt=""></div>
-          <div class="swiper-slide"><img src="../assets/images/banner2.png" alt=""></div>
+    <!-- banner -->
+    <section class="position-relative">
+      <picture>
+        <source srcset="../assets/images/banner-sm.png" media="(max-width: 576px)">
+        <img src="../assets/images/banner.png" alt="Logo">
+      </picture>
+      <div class="container">
+        <div class="position-absolute top-55 start-50 translate-middle d-none d-lg-block">
+          <a href="#">
+            <button type="button" class="btn btn-outline-gray-100 text-white">立即購買</button>
+          </a>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="position-absolute top-50 start-50 translate-middle d-block d-lg-none">
+          <a href="#">
+            <button type="button" class="btn btn-outline-gray-100 text-white">立即購買</button>
+          </a>
+        </div>
       </div>
-    </main>
+    </section>
+
+    <!-- 熱銷新品 -->
+    <!-- bug1：透明度遮罩問題，愛心也會吃到透明度-->
+    <!-- Q1：無法下stretched-link的class讓全card都吃到連結，因為下了stretched-link，hover被遮罩不會變色 -->
+    <!-- Q2：在img沒有辦法做hover，會影響到收藏愛心無法有hover效果 -->
+    <section class="hot-sales container py-12 py-lg-30">
+      <h2 class="title-decorate position-relative text-center text-gray-800 mb-12"><span
+          class="bg-white px-6">熱銷新品</span>
+      </h2>
+      <div class="row row-cols-1 row-cols-lg-4 mb-8">
+        <div class="col">
+          <div class="card text-center position-relative">
+            <!-- 收藏愛心 -->
+            <!-- bug1 -->
+            <div
+              class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+              <a href="#"><span class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+                  favorite
+                </span></a>
+            </div>
+            <!-- 商品圖片 -->
+            <a href="#">
+              <img src="../assets/images/Item-1.png" class="card-img" alt="商品照">
+            </a>
+            <!-- 商品文字 -->
+            <div class="card-body">
+              <a href="#">
+                <p class="hot-sales-title text-gray-800 mb-4">二姊款｜水晶手鍊</p>
+                <p class="text-gray-900">
+                  <span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+                    NT$1990
+                  </span>NT$980
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center position-relative">
+            <!-- 收藏愛心 -->
+            <div
+              class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+              <a href="#"><span class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+                  favorite
+                </span></a>
+            </div>
+            <!-- 商品圖片 -->
+            <a href="#">
+              <img src="../assets/images/Item-2.png" class="card-img" alt="商品照">
+            </a>
+            <!-- 商品文字 -->
+            <div class="card-body">
+              <a href="#">
+                <p class="hot-sales-title text-gray-800 mb-4">少女坦桑石｜水晶手鍊</p>
+                <p class="text-gray-900">
+                  <span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+                    NT$1990
+                  </span>NT$980
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center position-relative">
+            <!-- 收藏愛心 -->
+            <div
+              class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+              <a href="#"><span class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+                  favorite
+                </span></a>
+            </div>
+            <!-- 商品圖片 -->
+            <a href="#">
+              <img src="../assets/images/Item-3.png" class="card-img" alt="商品照">
+            </a>
+            <!-- 商品文字 -->
+            <div class="card-body">
+              <a href="#">
+                <p class="hot-sales-title text-gray-800 mb-4">太陽月亮｜水晶手鍊</p>
+                <p class="text-gray-900">
+                  <span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+                    NT$1990
+                  </span>NT$980
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center position-relative">
+            <!-- 收藏愛心 -->
+            <div
+              class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+              <a href="#"><span class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+                  favorite
+                </span></a>
+            </div>
+            <!-- 商品圖片 -->
+            <a href="#">
+              <img src="../assets/images/Item-4.png" class="card-img" alt="商品照">
+            </a>
+            <!-- 商品文字 -->
+            <div class="card-body">
+              <a href="#">
+                <p class="hot-sales-title text-gray-800 mb-4">富貴綠｜水晶手鍊</p>
+                <p class="text-gray-900">
+                  <span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+                    NT$1990
+                  </span>NT$980
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+
+        <button type="button" class="btn btn-primary-200 text-gray-700 py-2 px-6">more</button>
+      </div>
+    </section>
+
+    <!-- 其他系列 -->
+    <!-- Q1：如果想要下gy，應該下在哪裡？沒有辦法讓col上下分開，所以用my代替 -->
+    <!-- 這裡沒有向上間隔120，因為覺得離上一個section太遠，只設定pb120px -->
+    <section class="other-series container pb-30">
+      <div class="d-flex flex-column align-items-center mb-7">
+        <h2 class="text-gray-800 mb-8">其他系列</h2>
+        <p class="mb-1 fs-m-1 fw-normal text-gray-600 text-center">從精選的水晶到細緻的設計，每一款飾品都融合了自然純淨之美與現代時尚</p>
+        <p class="fs-m-1 fw-normal text-gray-600 text-center">精緻工藝打造出每一件手鍊，力求完美呈現獨特的優雅風格</p>
+      </div>
+      <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col">
+          <!-- Q1 -->
+          <div class="card text-white my-3">
+            <img src="../assets/images/series-1.png" class="card-img" alt="手鍊系列">
+            <div class="card-img-overlay">
+              <p class="position-absolute bottom-0 mb-4">手鍊</p>
+            </div>
+          </div>
+          <div class="card text-white my-3">
+            <img src="../assets/images/series-3.png" class="card-img" alt="手鍊系列">
+            <div class="card-img-overlay">
+              <p class="position-absolute bottom-0 mb-4">耳環</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-white my-lg-3">
+            <img src="../assets/images/series-2.png" class="card-img" alt="手鍊系列">
+            <div class="card-img-overlay">
+              <p class="position-absolute bottom-0 mb-4">項鍊</p>
+            </div>
+          </div>
+          <div class="card text-white my-3">
+            <img src="../assets/images/series-4.png" class="card-img" alt="手鍊系列">
+            <div class="card-img-overlay">
+              <p class="position-absolute bottom-0 mb-4">奧根塔</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 關於水晶 -->
+    <!-- Q1：因為文字過常會導致跑版，先刪除部分文案內容，應該要重新設定固定斷行 -->
+    <section class="about bg-primary-100 py-30">
+      <div class="container">
+        <h2 class="title-decorate position-relative text-center text-gray-800 mb-12"><span
+            class="bg-primary-100 px-6">關於水晶</span>
+        </h2>
+        <div class="row row-cols-1 row-cols-lg-2">
+          <div class="col">
+            <div class="card border-gray-400 my-4">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="../assets/images/about-1.png" class="about-img img-fluid rounded-start" alt="關於水晶">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body px-10 py-12">
+                    <a href="#">
+                      <h3 class="card-title h4 text-gray-800">大自然的淨化魔法</h3>
+                    </a>
+                    <p class="text-gray-700 my-4">白水晶是自然界中最常見且最為人所知的水晶之一。透明、純淨的外觀,深受人們喜愛。水晶中的“萬能石”...</p>
+                    <a href="#" class="read-more text-gray-500">Read More<span
+                        class="material-symbols-outlined align-bottom ms-4">
+                        chevron_right
+                      </span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card border-gray-400 my-4">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="../assets/images/about-3.png" class="about-img img-fluid rounded-start" alt="關於水晶">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body px-10 py-12">
+                    <a href="#">
+                      <h3 class="card-title h4 text-gray-800">地心深處的秘密</h3>
+                    </a>
+                    <p class="text-gray-700 my-4">坦桑石以其獨特的藍紫色澤和稀有性,迅速成為珠寶市場上的新寵。僅在坦桑尼亞北部的乞力馬扎羅山...</p>
+                    <a href="#" class="read-more text-gray-500">Read More<span
+                        class="material-symbols-outlined align-bottom ms-4">
+                        chevron_right
+                      </span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col">
+            <div class="card border-gray-400 my-4">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="../assets/images/about-2.png" class="about-img img-fluid rounded-start" alt="關於水晶">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body px-10 py-12">
+                    <a href="#">
+                      <h3 class="card-title h4 text-gray-800">歷史的自然瑰寶</h3>
+                    </a>
+                    <p class="text-gray-700 my-4">綠水晶以其清新、柔和的綠色光芒,自古以來就深受人們喜愛。因其美麗的外觀被用作飾品,還被賦予的神秘力量...</p>
+                    <a href="#" class="read-more text-gray-500">Read More<span
+                        class="material-symbols-outlined align-bottom ms-4">
+                        chevron_right
+                      </span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card border-gray-400 my-4">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="../assets/images/about-4.png" class="about-img img-fluid rounded-start" alt="關於水晶">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body px-10 py-12">
+                    <a href="#">
+                      <h3 class="card-title h4 text-gray-800">璀璨的招財能量</h3>
+                    </a>
+                    <p class="text-gray-700 my-4">因明亮的金黃色澤和璀璨的光芒,被視為財富與幸運的象徵。自古以來就被認為具有強大的招財能量,能夠吸引財富...</p>
+                    <a href="#" class="read-more text-gray-500">Read More<span
+                        class="material-symbols-outlined align-bottom ms-4">
+                        chevron_right
+                      </span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 好評回饋 -->
+    <section class="py-30">
+      <h2 class="container text-center text-gray-800 mb-8">好評回饋</h2>
+
+    </section>
 
     <!-- 以下資訊請注意保留 -->
     <%- include('./layout/footer'); -%>

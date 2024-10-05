@@ -1,4 +1,38 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.logo {
+  width: 216px;
+  height: 32px;
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  // transform: translate(-50%, -50%, 0);
+  .fixed-top {
+    top: none;
+  }
+}
+
+header {
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .navbar-toggler {
+    border: 0;
+  }
+
+  .nav-link {
+    color: #4b4b4b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  i {
+    &:hover {
+      color: $primary;
+    }
+  }
 }

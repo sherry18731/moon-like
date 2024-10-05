@@ -1,0 +1,17 @@
+.decorate-heart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #fff;
+  opacity: 0.5;
+  max-width: 40px;
+  border-radius: 50%;
+  padding: 8px;
+  span {
+    &:hover {
+      font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      color: #bf634e !important;
+      opacity: 1;
+    }
+  }
+}
