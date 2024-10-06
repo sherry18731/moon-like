@@ -1,8 +1,84 @@
-.test {
-    color: red;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-img {
-    max-width: 1920px;
-    height: 480px;
+
+
+
+// section1樣式
+
+
+
+
+// @media (max-width:576px){
+//     .pe-sm-2{
+
+//     }
+// }
+
+.content {
+    max-width: 1528px;
+}
+
+
+.pagination .page-link {
+    background-color: transparent;
+    /* 移除背景色 */
+    box-shadow: none;
+    /* 移除陰影 */
+    border: none;
+    /* 移除邊框 */
+    color: inherit;
+    /* 保持文字顏色 */
+}
+
+.pagination .page-link:hover {
+    background-color: transparent;
+    /* 移除滑鼠懸停時的背景色 */
+    box-shadow: none;
+    /* 移除滑鼠懸停時的陰影 */
+    color: rgba(191, 99, 78, 1);
+    /* 自訂滑鼠懸停時的文字顏色 (可選) */
+}
+
+// section2樣式
+.bg {
+    max-width: 100%;
+    height: 419px;
+}
+
+.sub {
+    width: 351px;
+    height: 204px;
+}
+
+.bg-2 {
+    width: 351px;
+    height: 151px;
+}
+
+
+.moon {
+    width: 216px;
+    height: 32px;
+}
+
+
+// 576px以上版本
+
+@media (min-width: 576px) {
+    .bg {
+        height: 640px;
+    }
+
+    .sub {
+        width: 688px;
+        height: 400px;
+    }
+
+    .bg-2 {
+        width: 640px;
+        height: 400px;
+    }
 }
