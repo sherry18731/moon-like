@@ -8,8 +8,27 @@
   background-repeat: no-repeat;
   background-position: center;
   // transform: translate(-50%, -50%, 0);
-  .fixed-top {
-    top: none;
+  // .fixed-top {
+  //   top: none;
+  // }
+  @include mobile {
+    width: 132px;
+    height: 20px;
+  }
+}
+
+.logo-md {
+  width: 64px;
+  height: 72px;
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mobile {
+    width: 32px;
+    height: 36px;
   }
 }
 
@@ -17,10 +36,6 @@ header {
   .dropdown-toggle::after {
     display: none;
   }
-  .navbar-toggler {
-    border: 0;
-  }
-
   .nav-link {
     color: #4b4b4b;
     display: flex;
@@ -34,5 +49,11 @@ header {
     &:hover {
       color: $primary;
     }
+  }
+}
+
+.navbar {
+  .navbar-toggler {
+    border: 0;
   }
 }
