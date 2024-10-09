@@ -24,7 +24,7 @@ function moveOutputPlugin() {
 
 export default defineConfig({
   // base 的寫法：
-  // base: '/Repository 的名稱/'
+  // base: '/moon-like/'
   base: '/moon-like/',
   plugins: [
     liveReload(['./layout/**/*.ejs', './pages/**/*.ejs', './pages/**/*.html']),
