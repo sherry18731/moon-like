@@ -14,20 +14,31 @@
 
     <!-- banner -->
     <section class="position-relative">
-      <picture>
+      <picture class="position-relative">
         <source srcset="../assets/images/banner-sm.png" media="(max-width: 576px)">
         <img src="../assets/images/banner.png" alt="Logo">
       </picture>
-      <div class="container">
-        <div class="position-absolute top-55 start-50 translate-middle d-none d-lg-block">
-          <a href="#">
-            <button type="button" class="btn btn-outline-gray-100 text-white">立即購買</button>
-          </a>
+      <div class="container position-absolute top-50 start-50 translate-middle">
+        <div class="d-none d-sm-block">
+          <div class="d-flex flex-column align-items-center">
+            <img class="mb-3 w-40" src="../assets/images/logo-white.png" alt="moon like logo">
+            <a href="#">
+              <button type="button" class="btn btn-outline-gray-100 text-white">立即購買</button>
+            </a>
+          </div>
         </div>
-        <div class="position-absolute top-50 start-50 translate-middle d-block d-lg-none">
-          <a href="#">
-            <button type="button" class="btn btn-outline-gray-100 text-white">立即購買</button>
-          </a>
+        <!-- mobile -->
+        <div class="position-absolute top-50 start-50 translate-middle d-sm-none">
+          <div class="d-flex flex-column align-items-center">
+            <img src="../assets/images/logo-lg-white.png" alt="logo">
+            <img class="mb-3 w-75 py-2" src="../assets/images/logo-white.png" alt="moon like logo">
+            <p class="text-white text-center pinyon-script-regular fs-4"> Moonlight gently caresses
+              illuminating the everyday elegance of crystals
+            </p>
+            <a href="#">
+              <button type="button" class="btn btn-outline-gray-100 text-white rounded-1 px-5 my-4">立即購買</button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
