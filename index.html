@@ -8,12 +8,12 @@
   <title>月幕 MOON LIKE | online shop</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />  <script type="module" crossorigin src="/moon-like/assets/main-a1d7835b.js"></script>
-  <link rel="stylesheet" href="/moon-like/assets/main-8433bb4c.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />  <script type="module" crossorigin src="/moon-like/assets/main-ee02ccec.js"></script>
+  <link rel="stylesheet" href="/moon-like/assets/main-dfed98a9.css">
 </head>
 
 <body>
-  <div class="bg-white sticky-top border-bottom">
+  <div class="bg-white sticky-top border-bottom d-none d-lg-block">
     <header class="container py-10">
         <!-- <h1 class="d-flex justify-content-center"><a class="logo" href="../pages/index.html"
                 style="background-image: url(/assets/images/logo.png);">月幕 MOON
@@ -21,17 +21,8 @@
                 online shop</a></h1> -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container position-relative flex-row-reverse flex-lg-row">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <h1 class="d-flex d-none d-lg-block"><a class="logo" href="../pages/index.html"
                         style="background-image: url(/moon-like/assets/logo-s-864ecb5f.png);">月幕 MOON
-                        LIKE |
-                        online shop</a></h1>
-                <h1 class="d-flex position-absolute start-0 d-block d-lg-none"><a class="logo"
-                        href="../pages/index.html" style="background-image: url(/moon-like/assets/logo-s-864ecb5f.png);">月幕 MOON
                         LIKE |
                         online shop</a></h1>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
@@ -63,15 +54,14 @@
                         </li>
                     </ul>
                 </div>
-
                 <ul class="navbar-nav d-flex align-items-center ms-auto">
                     <li class="nav-item">
                         <a href="#" class="p-4"><i class="bi bi-search h4"></i></a>
                     </li>
-                    <li class="nav-item d-none d-lg-block">
+                    <li class="nav-item">
                         <a href="#" class="p-4"><i class="bi bi-person h3"></i></a>
                     </li>
-                    <li class="nav-item d-none d-lg-block">
+                    <li class="nav-item">
                         <a href="#" class="p-4"><i class="bi bi-cart h4"></i></a>
                     </li>
                 </ul>
@@ -79,22 +69,89 @@
         </nav>
     </header>
 </div>
+
+<!-- mobile nav -->
+<nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom d-lg-none">
+    <div class="container-fluid">
+        <h1 class="d-flex align-items-center">
+            <a class="logo-md" href="../pages/index.html"
+                style="background-image: url(/moon-like/assets/logo-lg-opacity-2f3fa09c.png);">月幕 MOON
+                LIKE |
+                online shop</a>
+            <a class="logo" href="../pages/index.html" style="background-image: url(/moon-like/assets/logo-s-864ecb5f.png);">月幕
+                MOON
+                LIKE |
+                online shop</a>
+        </h1>
+        <a href="#" class="ms-auto me-2"><i class="bi bi-search h4"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h2 class="offcanvas-title text-gray-900 fs-m-1" id="offcanvasNavbarLabel">會員中心</h2>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex">
+                <ul class="navbar-nav text-gray-700 me-auto mb-2 mb-lg-0 w-100">
+                    <li class="nav-item text-gray-600 fs-r-3 mb-4">
+                        <i class="bi bi-person-circle"></i><span>123456789@gmail.com</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">我的帳戶</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">收件地址</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">折扣優惠</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">更新密碼</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">收件地址</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">我的訂單</a>
+                    </li>
+                    <form class="mt-auto">
+                        <button class="btn btn-primary-400 text-white w-100 rounded-1" type="button">登出</button>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
     <!-- banner -->
     <section class="position-relative">
-      <picture>
-        <source srcset="/moon-like/assets/banner-sm-541b7db8.png " media="(max-width: 576px)">
-        <img src="/moon-like/assets/banner-827f2563.png" alt="Logo">
+      <picture class="position-relative">
+        <source srcset="/moon-like/assets/banner-sm-38df2d7e.png " media="(max-width: 576px)">
+        <img src="/moon-like/assets/banner-65d9f523.png" alt="Logo">
       </picture>
-      <div class="container">
-        <div class="position-absolute top-55 start-50 translate-middle d-none d-lg-block">
-          <a href="#">
-            <button type="button" class="btn btn-outline-gray-100 text-white">立即購買</button>
-          </a>
+      <div class="container position-absolute top-50 start-50 translate-middle">
+        <div class="d-none d-sm-block">
+          <div class="d-flex flex-column align-items-center">
+            <img class="mb-3 w-40" src="/moon-like/assets/logo-white-e56cd9c8.png" alt="moon like logo">
+            <a href="#">
+              <button type="button" class="btn btn-outline-gray-100 text-white">立即購買</button>
+            </a>
+          </div>
         </div>
-        <div class="position-absolute top-50 start-50 translate-middle d-block d-lg-none">
-          <a href="#">
-            <button type="button" class="btn btn-outline-gray-100 text-white">立即購買</button>
-          </a>
+        <!-- mobile -->
+        <div class="position-absolute top-50 start-50 translate-middle d-sm-none">
+          <div class="d-flex flex-column align-items-center">
+            <img src="/moon-like/assets/logo-lg-white-09bdef6e.png" alt="logo">
+            <img class="mb-3 w-75 py-2" src="/moon-like/assets/logo-white-e56cd9c8.png" alt="moon like logo">
+            <p class="text-white text-center pinyon-script-regular fs-4"> Moonlight gently caresses
+              illuminating the everyday elegance of crystals
+            </p>
+            <a href="#">
+              <button type="button" class="btn btn-outline-gray-100 text-white rounded-1 px-5 my-4">立即購買</button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
