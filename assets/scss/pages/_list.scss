@@ -6,8 +6,12 @@ img {
 
 
 
-// section1樣式
-
+// section1鎖定高度，寬度自適應
+.bg1 {
+    max-width: 100%;
+    // height: 1566px;
+    justify-content: space-around;
+}
 
 
 
@@ -17,11 +21,113 @@ img {
 //     }
 // }
 
+// 第一層左側選單
+.side-menu {
+    width: 196px;
+}
+
+.list-link {
+    cursor: $form-range-track-cursor;
+    /* 當滑鼠滑過時顯示小手 */
+}
+
+.list-link:hover {
+    color: $primary-400 !important;
+    /* 自訂滑鼠懸停時的文字顏色 (可選) */
+    text-decoration: underline;
+    /* 滑鼠滑過時加底線 */
+}
+
+// 第一層容器右側設定
 .content {
-    max-width: 1528px;
+    // max-width: 1528px;
+    align-content: flex-start;
+
+}
+
+// 第二層容器設定內容位置
+.container {
+    justify-content: space-between;
+}
+
+// 第二層右側搜尋欄
+.form-control {
+    cursor: $form-range-track-cursor; // 使用變數
+}
+
+// 第二層card設定
+.title-decorate {
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $gray-400;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        z-index: 0;
+    }
+}
+
+.hot-sales {
+
+    // background-color: pink;
+    .card {
+        border: 0;
+    }
+
+    &-title {
+        &:hover {
+            color: $primary !important;
+        }
+    }
+
+    .btn-loving {
+        width: 40px;
+        height: 40px;
+
+        span {
+            &:hover {
+                font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+                color: $primary !important;
+            }
+        }
+    }
+}
+
+.other-series {
+    .card {
+        border: 0;
+    }
+}
+
+.about {
+    &-img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card-title {
+        &:hover {
+            color: $primary !important;
+        }
+    }
+
+    .read-more {
+        &:hover {
+            color: $primary-400 !important;
+        }
+    }
 }
 
 
+// 分頁設定
 .pagination .page-link {
     background-color: transparent;
     /* 移除背景色 */
@@ -42,43 +148,88 @@ img {
     /* 自訂滑鼠懸停時的文字顏色 (可選) */
 }
 
+
+
+
+
+
+
+
 // section2樣式
 .bg {
     max-width: 100%;
-    height: 419px;
+    height: 640px;
 }
 
 .sub {
-    width: 351px;
-    height: 204px;
+    width: 688px;
+    height: 400px;
+}
+
+.sub-all {
+    margin: 120px 0;
 }
 
 .bg-2 {
-    width: 351px;
-    height: 151px;
+    width: 640px;
+    height: 400px;
 }
-
 
 .moon {
     width: 216px;
     height: 32px;
 }
 
+.discribe {
+    width: 416px;
+    height: auto;
+}
 
-// 576px以上版本
+.form-control {
+    width: 320px;
+    height: 48px;
+}
 
-@media (min-width: 576px) {
+.form-btn {
+    width: 96px;
+}
+
+// 響應式小於375px
+@media (max-width: 375px) {
     .bg {
-        height: 640px;
-    }
-
-    .sub {
-        width: 688px;
-        height: 400px;
+        max-width: 100%;
+        height: 419px;
     }
 
     .bg-2 {
-        width: 640px;
-        height: 400px;
+        max-width: auto;
+        height: 151px;
+    }
+
+    .sub {
+        width: 351px;
+        height: 204px;
+    }
+
+    .sub-all {
+        padding-top: 32px;
+    }
+
+    .discribe {
+        max-width: auto;
+    }
+
+    .discribe p {
+        font-size: 18px;
+        padding-bottom: 16px;
+    }
+
+    .form-control {
+        width: 311px;
+        height: 40px;
+    }
+
+    .form-btn {
+        width: 64px;
     }
 }

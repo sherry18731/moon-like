@@ -21,75 +21,454 @@
 				</picture>
 			</section>
 
-			<!-- section1開發中 -->
-			<section>
+			<!-- section1開發中，左右各是116px -->
+			<!-- 分類區塊 -->
+			<section class="bg1 d-flex" style="background-color:white;">
+				<!-- 最外面大容器1920px -->
 
-				<!-- 分類區塊 -->
-
-
-				<!-- h2及搜尋框區塊 -->
-				<div class="content d-flex justify-content-between mt-20 ms-20">
-					<h2>人緣&戀愛</h2>
-					<div class="input-group" style="max-width: 226px;">
-						<span class="input-group-text" id="basic-addon1">
-							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search"
-								viewBox="0 0 16 16">
-								<path
-									d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0">
-								</path>
-							</svg>
-						</span>
-						<input type="text" class="form-control" placeholder="搜尋" aria-label="Input group example"
-							aria-describedby="basic-addon1">
+				<!-- 第一層容器左側分類區域 -->
+				<div class="d-flex flex-wrap">
+					<div class="pt-20">
+						<nav class="side-menu">
+							<ul class="list-unstyled h4 text-gray-700">
+								<h4 class="pb-8">分類</h4>
+								<!-- >無間距 -->
+								<li class="list-link pb-8">所有系列
+									<a class="list-link" href="#" aria-label="Next">
+										<span aria-hidden="true">&gt;</span>
+									</a>
+								</li>
+								<li class="list-link pb-8">財運&事業
+									<a class="list-link" href="#" aria-label="Next">
+										<span aria-hidden="true">&gt;</span>
+									</a>
+								</li>
+								<li class="list-link pb-8">人緣&戀愛
+									<a class="list-link" href="#" aria-label="Next">
+										<span aria-hidden="true">&gt;</span>
+									</a>
+								</li>
+								<li class="list-link pb-8">健康&平安
+									<a class="list-link" href="#" aria-label="Next">
+										<span aria-hidden="true">&gt;</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
 					</div>
 				</div>
+				<!-- 第一層容器右側區域 -->
+				<div class="content d-flex flex-wrap pt-8 pt-lg-20">
+					<!-- 第二層容器p跟搜尋框 -->
+					<div class="container d-flex">
+						<div class=" h2 text-gray-800">人緣&戀愛</div>
+						<div class="input-group d-flex"
+							style="max-width: 306px; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2), 0px 0.1px 0.3px 0px rgba(0, 0, 0, 0.1); border-radius: 2px; background-color: white;">
+							<span class="input-group-text" id="basic-addon1"
+								style="background-color: transparent; border: none;">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+									class="bi bi-search" viewBox="0 0 16 16">
+									<path
+										d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0">
+									</path>
+								</svg>
+							</span>
+							<input type="text" class="form-control" placeholder="搜尋" aria-label="Input group example"
+								aria-describedby="basic-addon1" style="border: none;">
+						</div>
+					</div>
 
-				<!-- card區塊 -->
+					<!-- 第二層容器card區塊-->
+					<section class="hot-sales container py-8 py-lg-12">
+						<div class="row row-cols-2 row-cols-lg-4">
+							<!-- card第一排 -->
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<!-- bug1 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-1.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">二姊款｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-3.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">少女坦桑石｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-2.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">太陽月亮｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-4.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">富貴綠｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- card第二排 -->
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<!-- bug1 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-1.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">二姊款｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-3.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">少女坦桑石｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-2.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">太陽月亮｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-4.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">富貴綠｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- card第三排 -->
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<!-- bug1 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-1.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">二姊款｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-3.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">少女坦桑石｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-2.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">太陽月亮｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center position-relative">
+									<!-- 收藏愛心 -->
+									<div
+										class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
+										<a href="#"><span
+												class="material-symbols-outlined align-bottom text-gray-600 fw-light">
+												favorite
+											</span></a>
+									</div>
+									<!-- 商品圖片 -->
+									<a href="plist.html">
+										<img src="../assets/images/Item-4.png" class="card-img" alt="商品照">
+									</a>
+									<!-- 商品文字 -->
+									<div class="card-body">
+										<a href="plist.html">
+											<p class="hot-sales-title text-gray-800 mb-4">富貴綠｜水晶手鍊</p>
+											<p class="text-gray-900">
+												<span class="text-decoration-line-through fs-m-2 text-gray-600 me-3">
+													NT$1990
+												</span>NT$980
+											</p>
+										</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</section>
 
 
-				<!-- 分頁 (Pagination)完成 -->
-				<div>
-					<nav aria-label="Page navigation example border-0">
-						<ul class="pagination justify-content-center border-0">
-							<li class="page-item pe-2 pe-sm-4"><a class="page-link" href="#">1</a></li>
-							<li class="page-item pe-2 pe-sm-4"><a class="page-link" href="#">2</a></li>
-							<li class="page-item pe-2 pe-sm-4"><a class="page-link" href="#">3</a></li>
-							<a class="page-link" href="#" aria-label="Next">
-								<span aria-hidden="true">&gt;</span>
-							</a>
-						</ul>
-					</nav>
+					<!-- 第二層容器分頁 (Pagination)完成 -->
+					<div class="container py-20  pt-12">
+						<nav aria-label="Page navigation example border-0">
+							<ul class="pagination justify-content-center border-0">
+								<li class="page-item pe-2 pe-sm-4"><a class="page-link" href="#">1</a></li>
+								<li class="page-item pe-2 pe-sm-4"><a class="page-link" href="#">2</a></li>
+								<li class="page-item pe-2 pe-sm-4"><a class="page-link" href="#">3</a></li>
+								<a class="page-link" href="#" aria-label="Next">
+									<span aria-hidden="true">&gt;</span>
+								</a>
+							</ul>
+						</nav>
+					</div>
 				</div>
 			</section>
+
+
+
+
+
 			<!-- section2開發中 -->
 			<!-- 背景色 -->
 			<section class="bg" style="background-color: rgba(237, 231, 230, 1);">
 				<!-- 響應式ok -->
-				<div class="container d-sm-flex d-flex justify-content-sm-center justify-content-center border-radius-xl">
-					<!-- 左邊圖案區塊 -->
-					<div class="my-30">
-						<img src="../assets/images/sub.png" class="sub border-radius-xl">
+				<div
+					class="container d-xxl-flex flex-xxl-row justify-content-center   justify-content-sm-center  border-radius-xl">
+					<!-- 左邊圖案區塊 6格+2個gutter-->
+					<div class="sub-all">
+						<img src="../assets/images/sub.png" class="sub">
 					</div>
-					<!-- 右邊區塊 為什麼手機板掉不到下一行 我知道為啥因為要先做手機板沒有d-flex才可以做網頁版ㄚㄚㄚㄚㄚ崩潰，明天調整從網頁版往下做好了比較好做 -->
-					<!-- 改變 Flex 項目在 Flex 容器中換行的方式。可以選擇使用 .flex-nowrap 完全不換行 (瀏覽器預設)，使用 .flex-wrap 進行換行，或使用 .flex-wrap-reverse 進行反向換行。 -->
-					<div class="my-30 bg-2 rounded-end" style="background-color: white ;">
-						<div
-							class="d-flex flex-column-reverse justify-content-sm-center justify-content-center align-items-sm-center align-items-center mx-28">
-							<div class="moon mt-30">
-								<img src="../assets/images/MOON LIKE.png" class="mb-14" alt="">
-								<p class="fs-m-1 mb-8">訂閱獲得更多資訊!</p>
 
-								<!-- 為什麼訂閱的button不會跑上去 -->
-								<form class="row">
-									<label for="email" class="form-label"></label>
-									<input type="email" class="form-control  col-8" id="email" placeholder="請輸入email">
-									<button type="submit" class="btn btn-primary-300 col-4 text-white">訂閱</button>
-								</form>
+					<div class="sub-all bg-2" style="background-color: white ;">
+						<!-- padding-lef:112px padding-top:96px-->
+						<div class="d-flex ps-28 pt-24">
+							<div class="moon">
+								<!-- padding-bottom:56px -->
+								<img src="../assets/images/MOON LIKE.png" class="pb-14" alt="">
+								<!-- padding-bottom:32px -->
+								<!-- 剩此以下RWD未調整 -->
+								<div class="discribe">
+									<h2 class="pb-8">訂閱獲得更多資訊!</h2>
+									<form class="row flex-nowrap justify-content-start">
+										<input type="email" class="form-control" id="email" placeholder="請輸入email">
+										<button type="submit"
+											class="btn btn-primary-400 form-btn text-white">訂閱</button>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
 			</section>
 
 		</main>
