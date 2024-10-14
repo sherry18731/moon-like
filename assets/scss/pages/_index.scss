@@ -1,3 +1,4 @@
+// 共同樣式
 .title-decorate {
   span {
     position: relative;
@@ -15,7 +16,7 @@
     z-index: 0;
   }
 }
-
+// 熱門新品
 .hot-sales {
   // background-color: pink;
   .card {
@@ -36,15 +37,22 @@
       }
     }
   }
+  .swiper-slide {
+    margin: 0px;
+  }
 }
+// 其他系列
 .other-series {
   .card {
     border: 0;
+    @include mobile {
+      height: 168px;
+    }
   }
 }
+// 關於水晶
 .about {
   &-img {
-    height: 100%;
     object-fit: cover;
   }
   .card-title {
@@ -55,6 +63,26 @@
   .read-more {
     &:hover {
       color: $primary-400 !important;
+    }
+  }
+}
+// 好評回饋
+.comment {
+  .swiper-slide {
+    background: none;
+    height: auto;
+    .card {
+      height: 100%;
+    }
+  }
+  &-herder {
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+  &-content {
+    @include mobile {
+      font-size: 12px;
     }
   }
 }
