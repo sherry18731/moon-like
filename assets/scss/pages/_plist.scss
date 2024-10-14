@@ -1,9 +1,9 @@
 .breadcrumb {
-  background-color:#f9f6F5;
+  background-color: #f9f6f5;
   // color:rgba(249, 249, 249, 0.7); /* 半透明背景色 */
   border-radius: 0.25rem; /* 圓角 */
-  max-width: 1920px; /* 設計稿最大寬度 */
-  height:0 auto;
+  width: 100%; /* 設計稿最大寬度 */
+  height: 0 auto;
   backdrop-filter: blur(20px); /* 模糊效果 */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 陰影效果 */
 }
@@ -19,125 +19,139 @@
 /* 針對較小螢幕的樣式調整 */
 @media (max-width: 576px) {
   .breadcrumb {
-      max-width: 100%; /* 小螢幕上佔滿寬度 */
-      font-size: 16px; /* 調整字體大小 */
+    max-width: 100%; /* 小螢幕上佔滿寬度 */
+    font-size: 16px; /* 調整字體大小 */
   }
   .breadcrumb-item + .breadcrumb-item::before {
-      padding: 0 5px; /* 調整小螢幕上的分隔符間距 */
+    padding: 0 5px; /* 調整小螢幕上的分隔符間距 */
   }
+}
+
+.section-article {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.container {
+  padding-top: 0;
+  margin-top: 0;
 }
 
 html,
 body {
-position: relative;
-height: 100%;
+  position: relative;
+  height: 100%;
 }
 
 body {
-background: #eee;
-margin: 0;
-padding: 0;
+  background: #eee;
+  margin: 0;
+  padding: 0;
 }
 
 /* Swiper 容器 */
 .swiper {
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* Swiper 每個 slide */
 .swiper-slide {
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-slide img {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-border-radius: 8px; /* 圓角設置 */
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px; /* 圓角設置 */
 }
 
 /* 主圖片區域 */
 .mySwiper2 {
-height:0 auto ; /* 主圖片高度 */
-max-width: 664px; /* 主圖片寬度 */
-margin: 0 auto; /* 置中顯示 */
-grid-column: span 6; /* 主圖片佔6格 */
+  height: 0 auto; /* 主圖片高度 */
+  max-width: 664px; /* 主圖片寬度 */
+  margin: 0 auto; /* 置中顯示 */
+  grid-column: span 6; /* 主圖片佔6格 */
 }
 
 .mySwiper2 .swiper-slide img {
-width: 100%;
-height: 100%;
-object-fit: cover; /* 確保圖片適應容器 */
-border-radius: 8px; /* 圓角設置 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 確保圖片適應容器 */
+  border-radius: 8px; /* 圓角設置 */
 }
 
 /* 縮略圖區域 */
 .mySwiper {
-height: 144px; /* 縮略圖高度 */
-box-sizing: border-box;
-padding: 10px 0;
-display: flex;
-justify-content: center; /* 縮略圖居中顯示 */
-grid-column: span 6; /* 縮略圖佔6格 */
+  height: 144px; /* 縮略圖高度 */
+  box-sizing: border-box;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center; /* 縮略圖居中顯示 */
+  grid-column: span 6; /* 縮略圖佔6格 */
 }
 
 .mySwiper .swiper-wrapper {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .mySwiper .swiper-slide {
-height: 100%; /* 縮略圖的高度 */
-opacity: 0.6; /* 未選中縮略圖的透明度 */
-cursor: pointer;
-transition: opacity 0.3s ease; /* 動態效果 */
+  height: 100%; /* 縮略圖的高度 */
+  opacity: 0.6; /* 未選中縮略圖的透明度 */
+  cursor: pointer;
+  transition: opacity 0.3s ease; /* 動態效果 */
 }
 
 /* 第一、二、三張縮略圖 */
 .mySwiper .swiper-slide:nth-child(1),
 .mySwiper .swiper-slide:nth-child(2),
 .mySwiper .swiper-slide:nth-child(3) {
-width: 144px; /* 縮略圖寬度 */
+  width: 144px; /* 縮略圖寬度 */
 }
 
 /* 第四張縮略圖，包含中度陰影 */
 .mySwiper .swiper-slide:nth-child(4) {
-width: 136px; /* 縮略圖寬度 */
-position: relative; /* 為了顯示陰影，設置相對定位 */
+  width: 136px; /* 縮略圖寬度 */
+  position: relative; /* 為了顯示陰影，設置相對定位 */
 }
 
 .mySwiper .swiper-slide:nth-child(4)::after {
-content: ""; /* 虛擬元素，用於陰影效果 */
-position: absolute;
-top: 0;
-right: -40px; /* 陰影相對於右側偏移 */
-width: 40px; /* 陰影寬度 */
-height: 100%;
-background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); /* 漸變陰影效果 */
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* 中度陰影 */
+  content: ""; /* 虛擬元素，用於陰影效果 */
+  position: absolute;
+  top: 0;
+  right: -40px; /* 陰影相對於右側偏移 */
+  width: 40px; /* 陰影寬度 */
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  ); /* 漸變陰影效果 */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* 中度陰影 */
 }
 
 /* 縮略圖選中狀態 */
 .mySwiper .swiper-slide-thumb-active {
-opacity: 1; /* 選中縮略圖不透明 */
-border: 2px solid #000; /* 選中縮略圖的邊框 */
+  opacity: 1; /* 選中縮略圖不透明 */
+  border: 2px solid #000; /* 選中縮略圖的邊框 */
 }
 
 .mySwiper .swiper-slide img {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover; /* 確保縮略圖適應容器 */
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 確保縮略圖適應容器 */
 }
 
 /* 整個容器的網格佈局 */
- /* 調整圖片的大小及對齊方式 */
- .product-image {
+/* 調整圖片的大小及對齊方式 */
+.product-image {
   max-width: 100%; /* 圖片寬度最大為列的寬度 */
   height: auto; /* 高度自動調整以保持比例 */
   margin-bottom: 20px; /* 下邊距 */
@@ -161,13 +175,11 @@ object-fit: cover; /* 確保縮略圖適應容器 */
   justify-content: flex-start;
   max-width: 148px;
   font-size: 32px;
-  color: #D6A69A; /* 自定義折扣價格顏色 */
   height: auto;
 }
 .original-price {
   max-width: 135px;
   font-size: 28px;
-  color: #BFBFBF; /* 自定義原價顏色 */
   text-decoration: line-through; /* 刪除線 */
   height: auto;
 }
@@ -184,9 +196,9 @@ object-fit: cover; /* 確保縮略圖適應容器 */
   height: auto;
   max-width: 550px;
 }
-.input-group{
+.input-group {
   height: auto;
-  max-width:550px;
+  max-width: 550px;
 }
 
 .btn-cart {
@@ -194,13 +206,15 @@ object-fit: cover; /* 確保縮略圖適應容器 */
   max-width: 550px; /* 讓按鈕佔滿整個容器 */
   margin-top: 32px; /* 與數量選擇器之間的間距 */
   height: auto;
+  width: 100%;
 }
 
 .product-image1 {
   width: 100%; /* 讓圖片寬度適應父容器 */
   height: auto; /* 保持圖片比例 */
 }
-.product-image2,.product-image3 {
+.product-image2,
+.product-image3 {
   width: 100%; /* 讓圖片寬度適應父容器 */
   height: auto; /* 保持圖片比例 */
 }
@@ -216,11 +230,11 @@ object-fit: cover; /* 確保縮略圖適應容器 */
 }
 
 .custom-heading::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 40px; /* 短條紋的寬度 */
   height: 2px; /* 短條紋的高度 */
-  background-color: #D6A69A; /* 短條紋的顏色 */
+  background-color: #d6a69a; /* 短條紋的顏色 */
   bottom: 0; /* 將短條紋放置於文字下方 */
   left: 50%;
   transform: translateX(-50%); /* 確保短條紋居中 */
@@ -238,13 +252,19 @@ object-fit: cover; /* 確保縮略圖適應容器 */
   width: 100%;
   height: auto; /* 保持比例 */
 }
-
-.price {
+.my-style {
   font-size: 16px;
-  color: #444444; /* 折扣價格顏色 */
+}
+.my-style1 {
+  font-size: 14px;
+}
+.price {
+  font-size: 18px;
+  color: #0c261a; /* 折扣價格顏色 */
 }
 
 .original-price {
+  font-size: 18px;
   color: #999;
   text-decoration: line-through; /* 刪除線 */
   margin-right: 10px;
@@ -252,77 +272,25 @@ object-fit: cover; /* 確保縮略圖適應容器 */
 
 .price-row {
   display: flex;
-  justify-content: center;
-  align-items: baseline;
+  justify-content: center; /* 讓兩個價格左右對齊 */
+  align-items: center;
 }
-
+/* 手機版（螢幕寬度小於 576px）換行顯示 */
+@media (max-width: 576px) {
+  .price-row {
+    flex-direction: column; /* 垂直排列，實現換行 */
+    align-items: center; /* 中心對齊 */
+  }
+}
 /* 愛心圖標的樣式，設置為右上角，並使用背景圖片 */
 .heart-icon {
   position: absolute;
   top: 14px;
   right: 14px;
-  width: 24px;
-  height: 24px;
-  background-image: url('https://img.icons8.com/?size=100&id=f3DSk7zyYLW7&format=png&color=000000'); /* 這裡載入愛心圖片 */
+  width: 20px;
+  height: 20px;
+  background-image: url("https://img.icons8.com/?size=100&id=f3DSk7zyYLW7&format=png&color=000000"); /* 這裡載入愛心圖片 */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
