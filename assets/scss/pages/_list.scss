@@ -220,90 +220,168 @@ img {
     /* 自訂滑鼠懸停時的文字顏色 (可選) */
 }
 
+.pagination1 {
+    padding: 80px 540px;
+}
 
-
-
-
-
+// 響應式小於992px
+@media (max-width: 992px) {
+    .pagination1 {
+        padding: 32px 84px;
+    }
+}
 
 
 // section2樣式
+
+// 背景圖
 .section2-bg {
     max-width: 100%;
     height: 640px;
 }
 
-// 左側區塊
-.section2-left {
+.section2 {
+    padding: 120px 0;
+}
+
+// 左側背景
+.sub {
+    max-width: 635px;
     height: 400px;
-    border-radius: 24px 0 0 24px;
 }
 
-// 右側區塊
-.section2-right {
-    // max-width: 640px;
-    height: auto;
-    border-radius: 0 24px 24px 0;
+// 右側白色背景
+.section2-bg2 {
+    width: 661px;
+    height: 400px;
 }
 
+// 右側容器
 .moon {
-    // max-width: 216px;
-    // height: 32px;
+    padding-left: 135px;
     padding-top: 96px;
 }
 
-.discribe {
-    max-width: 416px;
-    height: auto;
+// 右側內容
+.moon-like {
+    width: 416px;
 }
 
+// 右側圖案
+.moon-img {
+    width: 216px;
+    height: 32px;
 
+}
 
+// 訂閱獲得更多資訊
+.discribe {
+    padding-top: 56px;
+    max-width: 416px;
+    height: auto;
+
+}
+
+.discribe-h2 {
+    padding-bottom: 32px;
+}
+
+// 訂閱輸入email框
 .form-control {
     max-width: 320px;
     height: 48px;
+    // 不知道為何不齊補margin只是為了對齊
+    margin-left: 12px;
 }
 
 .form-btn {
     width: 96px;
 }
 
-// 響應式小於375px
-// @media (max-width: 375px) {
-//     .bg {
-//         max-width: 100%;
-//         height: 419px;
-//     }
+// 響應式小於992px
+@media (max-width: 992px) {
 
-//     .bg-2 {
-//         max-width: auto;
-//         height: 151px;
-//     }
+    // 背景圖
+    .section2-bg {
+        width: 375px;
+        height: 419px;
+    }
 
-//     .sub {
-//         max-width: 351px;
-//         height: atuo;
-//     }
+    .section2 {
+        padding: 32px 12px;
+    }
 
-//     .sub-all {
-//         padding-top: 32px;
-//     }
+    // 左側背景
+    .sub {
+        width: 351px;
+        height: 204px;
+    }
 
-//     .discribe {
-//         max-width: 311px;
-//     }
+    // 右側白色背景
+    .section2-bg2 {
+        width: 100%;
+        /* 確保背景寬度自適應，填滿容器 */
+        min-height: auto;
+        /* 確保背景高度根據內容自適應 */
+        height: auto;
+        /* 將固定高度去掉，讓內容撐開背景 */
+        padding: 32px 12px;
+        /* 增加 padding 讓內容不緊貼邊緣 */
+        box-sizing: border-box;
+        /* 計算 padding 在內，避免溢出 */
+    }
 
-//     .discribe p {
-//         font-size: 18px;
-//         padding-bottom: 16px;
-//     }
+    // 右側容器
+    .moon {
+        padding-left: 0;
+        padding-top: 0;
+    }
 
-//     .form-control {
-//         max-width: 311px;
-//         height: 40px;
-//     }
+    // 右側內容
+    .moon-like {
+        padding: 0 121px;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.5;
+        box-sizing: border-box;
+    }
 
-//     .form-btn {
-//         width: 64px;
-//     }
-// }
+    // 右側圖案
+    .moon-img {
+        width: 108px;
+        height: auto;
+
+    }
+
+
+    // .section2-sub {
+    //     padding: 12px 0;
+    // }
+
+    // 訂閱獲得更多資訊
+    .discribe {
+        // max-width: auto;
+        padding-top: 24px;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .discribe p {
+        font-size: 18px;
+        padding-bottom: 16px;
+    }
+
+    // 訂閱輸入email框
+    .form-control {
+        width: 100%;
+        height: 40px;
+        padding-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    .form-btn {
+        width: auto;
+    }
+}

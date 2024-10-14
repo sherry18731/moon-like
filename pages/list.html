@@ -13,7 +13,7 @@
 	<%- include('./layout/header'); -%>
 		<!-- 請刪除main中間資料之後開始開發 -->
 		<main>
-			<!-- banner區塊開發完成 -->
+			<!-- banner區塊 -->
 			<section>
 				<picture>
 					<source media="(min-width: 576px)" srcset="../assets/images/banner2.png">
@@ -21,7 +21,7 @@
 				</picture>
 			</section>
 
-			<!-- section1開發中 -->
+			<!-- section1 -->
 			<!-- 分類區塊 -->
 			<section class="bg1 d-flex" style="background-color:white;">
 				<!-- 第一層容器左側分類 -->
@@ -439,7 +439,7 @@
 					</section>
 
 					<!-- 第二層容器分頁 (Pagination) -->
-					<div class="container py-20  pt-12">
+					<div class="container pagination1">
 						<nav aria-label="Page navigation example border-0">
 							<ul class="pagination justify-content-center border-0">
 								<li class="page-item pe-2 pe-sm-4"><a class="page-link" href="#">1</a></li>
@@ -458,52 +458,28 @@
 			<!-- 背景色 -->
 			<section class="section2-bg" style="background-color: rgba(237, 231, 230, 1);">
 				<!-- 響應式ok -->
-				<div class="container d-xxl-flex flex-xxl-row justify-content-center  justify-content-sm-center">
-					<!-- 左邊區塊-->
-					<div class="row d-flex flex-nowrap py-30 gx-0 section2-left">
-						<div class="col-lg-6 col-4 py-0">
-							<img src="../assets/images/sub.png" class="sub">
-						</div>
-
-						<!-- 右邊區塊 -->
-						<div class="section2-right" style="background-color: white ;">
-							<!-- padding-lef:112px padding-top:96px-->
-							<div class="d-flex col-lg-6 col-4 section2-right">
-								<div class="moon col-lg-4">
-									<!-- padding-bottom:56px -->
-									<img src="../assets/images/MOON LIKE.png" class="pb-14" alt="">
-									<!-- padding-bottom:32px -->
-									<!-- 剩此以下RWD未調整 -->
-									<div class="discribe">
-										<h2 class="pb-8">訂閱獲得更多資訊!</h2>
-										<form class="row flex-nowrap justify-content-start">
-											<input type="email" class="form-control" id="email" placeholder="請輸入email">
-											<button type="submit"
-												class="btn btn-primary-400 form-btn text-white">訂閱</button>
-
-
-
-
-											<!-- <div class="sub-all">
-							<img src="../assets/images/sub.png" class="sub">
-						</div> -->
-											<!-- 右邊區塊 -->
-											<!-- <div class="sub-all bg-2 sub2" style="background-color: white ;"> -->
-											<!-- padding-lef:112px padding-top:96px-->
-											<!-- <div class="d-flex ps-28 pt-24">
-								<div class="moon"> -->
-											<!-- padding-bottom:56px -->
-											<!-- <img src="../assets/images/MOON LIKE.png" class="pb-14" alt=""> -->
-											<!-- padding-bottom:32px -->
-											<!-- 剩此以下RWD未調整 -->
-											<!-- <div class="discribe">
-										<h2 class="pb-8">訂閱獲得更多資訊!</h2>
-										<form class="row flex-nowrap justify-content-start">
-											<input type="email" class="form-control" id="email" placeholder="請輸入email">
-											<button type="submit"
-												class="btn btn-primary-400 form-btn text-white">訂閱</button> -->
-										</form>
-									</div>
+				<div
+					class="container section2 d-xxl-flex flex-xxl-row flex-row flex-sm-column justify-content-center  justify-content-sm-center  border-radius-xl">
+					<!-- 左邊區塊 -->
+					<div class="section2-sub text-block-left">
+						<img src="../assets/images/sub.png" class="sub">
+					</div>
+					<!-- 右側區塊 -->
+					<div class="section2-bg2 text-block-left" style="background-color: white ;">
+						<!-- padding-lef:112px padding-top:96px-->
+						<div class="moon">
+							<div class="moon-like">
+								<!-- padding-bottom:56px -->
+								<img src="../assets/images/MOON LIKE.png" class="moon-img" alt="moon-img">
+								<!-- padding-bottom:32px -->
+								<!-- 剩此以下RWD未調整 -->
+								<div class="discribe">
+									<h2 class="discribe-h2">訂閱獲得更多資訊!</h2>
+									<form class="row flex-nowrap justify-content-start">
+										<input type="email" class="form-control" id="email" placeholder="請輸入email">
+										<button type="submit"
+											class="btn btn-primary-400 form-btn text-white">訂閱</button>
+									</form>
 								</div>
 							</div>
 						</div>
