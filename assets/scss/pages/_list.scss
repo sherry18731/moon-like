@@ -6,22 +6,200 @@ img {
 
 
 
-// section1樣式
+// section1
+.bg1 {
+    justify-content: space-around;
+    display: flex;
+}
 
+// 第一層左側選單
+.side-menu {
+    max-width: 100%;
+}
 
+.list-link {
+    cursor: $form-range-track-cursor;
+    /* 當滑鼠滑過時顯示小手 */
 
+}
 
-// @media (max-width:576px){
-//     .pe-sm-2{
+.list-link:hover {
+    color: $primary-400 !important;
+    /* 自訂滑鼠懸停時的文字顏色 (可選) */
+    text-decoration: underline;
+    /* 滑鼠滑過時加底線 */
 
-//     }
-// }
+}
 
+.side-menu .list-link a span {
+    font-size: 1.5em;
+    /* 調整圖案大小 */
+
+}
+
+.text {
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+@include pad {
+    .text {
+        font-size: 24px;
+    }
+}
+
+// 第一層容器右側設定
 .content {
+    // 為了避免擠壓到旁邊分類
     max-width: 1528px;
+    align-content: flex-start;
+
+}
+
+// 第二層容器設定內容位置
+.container {
+    justify-content: space-between;
+}
+
+// 第二層右側搜尋欄
+.form-control {
+    cursor: $form-range-track-cursor; // 使用變數
+}
+
+// 第二層card設定
+.title-decorate {
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $gray-400;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        z-index: 0;
+    }
+}
+
+.hot-sales {
+
+    // background-color: pink;
+    .card {
+        border: 0;
+    }
+
+    &-title {
+        &:hover {
+            color: $primary !important;
+        }
+    }
+
+    .btn-loving {
+        width: 40px;
+        height: 40px;
+
+        span {
+            &:hover {
+                font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+                color: $primary !important;
+            }
+        }
+    }
 }
 
 
+.other-series {
+    .card {
+        border: 0;
+    }
+}
+
+.about {
+    &-img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card-title {
+        &:hover {
+            color: $primary !important;
+        }
+    }
+
+    .read-more {
+        &:hover {
+            color: $primary-400 !important;
+        }
+    }
+}
+
+.card {
+    position: relative;
+    /* 確保子元素的絕對定位相對於這個容器 */
+    overflow: hidden;
+    /* 確保背景層不會超出邊界 */
+}
+
+.overlay {
+    position: absolute;
+    /* 絕對定位，填滿父容器 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* 半透明黑色背景 */
+    opacity: 0;
+    /* 初始隱藏 */
+    transition: opacity 0.3s;
+    /* 漸變效果 */
+}
+
+.card:hover .overlay {
+    opacity: 1;
+    /* 當鼠標懸停時顯示背景 */
+}
+
+.add-to-cart-btn {
+    position: absolute;
+    /* 絕對定位 */
+    bottom: 16px;
+    /* 距離底部16px */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 1);
+    /* 半透明白色背景 */
+    color: $gray-700 !important;
+    /* 按鈕文字顏色 */
+    font-size: 18px;
+    line-height: 1.5;
+    border: none;
+    /* 去除邊框 */
+    padding: 6.5px 10px;
+    border-radius: 4px;
+    opacity: 0;
+    /* 初始隱藏 */
+    transition: opacity 0.3s;
+    /* 漸變效果 */
+    width: 90%;
+    /* 設定寬度為100% */
+}
+
+.card:hover .add-to-cart-btn {
+    opacity: 1;
+    /* 當鼠標懸停時顯示按鈕 */
+}
+
+.add-to-cart-btn:hover {
+    color: $primary !important;
+}
+
+// 分頁設定
 .pagination .page-link {
     background-color: transparent;
     /* 移除背景色 */
@@ -42,43 +220,168 @@ img {
     /* 自訂滑鼠懸停時的文字顏色 (可選) */
 }
 
+.pagination1 {
+    padding: 80px 540px;
+}
+
+// 響應式小於992px
+@media (max-width: 992px) {
+    .pagination1 {
+        padding: 32px 84px;
+    }
+}
+
+
 // section2樣式
-.bg {
+
+// 背景圖
+.section2-bg {
     max-width: 100%;
-    height: 419px;
+    height: 640px;
 }
 
+.section2 {
+    padding: 120px 0;
+}
+
+// 左側背景
 .sub {
-    width: 351px;
-    height: 204px;
+    max-width: 635px;
+    height: 400px;
 }
 
-.bg-2 {
-    width: 351px;
-    height: 151px;
+// 右側白色背景
+.section2-bg2 {
+    width: 661px;
+    height: 400px;
 }
 
-
+// 右側容器
 .moon {
+    padding-left: 135px;
+    padding-top: 96px;
+}
+
+// 右側內容
+.moon-like {
+    width: 416px;
+}
+
+// 右側圖案
+.moon-img {
     width: 216px;
     height: 32px;
+
 }
 
+// 訂閱獲得更多資訊
+.discribe {
+    padding-top: 56px;
+    max-width: 416px;
+    height: auto;
 
-// 576px以上版本
+}
 
-@media (min-width: 576px) {
-    .bg {
-        height: 640px;
+.discribe-h2 {
+    padding-bottom: 32px;
+}
+
+// 訂閱輸入email框
+.form-control {
+    max-width: 320px;
+    height: 48px;
+    // 不知道為何不齊補margin只是為了對齊
+    margin-left: 12px;
+}
+
+.form-btn {
+    width: 96px;
+}
+
+// 響應式小於992px
+@media (max-width: 992px) {
+
+    // 背景圖
+    .section2-bg {
+        width: 375px;
+        height: 419px;
     }
 
+    .section2 {
+        padding: 32px 12px;
+    }
+
+    // 左側背景
     .sub {
-        width: 688px;
-        height: 400px;
+        width: 351px;
+        height: 204px;
     }
 
-    .bg-2 {
-        width: 640px;
-        height: 400px;
+    // 右側白色背景
+    .section2-bg2 {
+        width: 100%;
+        /* 確保背景寬度自適應，填滿容器 */
+        min-height: auto;
+        /* 確保背景高度根據內容自適應 */
+        height: auto;
+        /* 將固定高度去掉，讓內容撐開背景 */
+        padding: 32px 12px;
+        /* 增加 padding 讓內容不緊貼邊緣 */
+        box-sizing: border-box;
+        /* 計算 padding 在內，避免溢出 */
+    }
+
+    // 右側容器
+    .moon {
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    // 右側內容
+    .moon-like {
+        padding: 0 121px;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.5;
+        box-sizing: border-box;
+    }
+
+    // 右側圖案
+    .moon-img {
+        width: 108px;
+        height: auto;
+
+    }
+
+
+    // .section2-sub {
+    //     padding: 12px 0;
+    // }
+
+    // 訂閱獲得更多資訊
+    .discribe {
+        // max-width: auto;
+        padding-top: 24px;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .discribe p {
+        font-size: 18px;
+        padding-bottom: 16px;
+    }
+
+    // 訂閱輸入email框
+    .form-control {
+        width: 100%;
+        height: 40px;
+        padding-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    .form-btn {
+        width: auto;
     }
 }
