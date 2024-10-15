@@ -112,7 +112,6 @@ img {
     }
 }
 
-
 .other-series {
     .card {
         border: 0;
@@ -143,6 +142,15 @@ img {
     /* 確保子元素的絕對定位相對於這個容器 */
     overflow: hidden;
     /* 確保背景層不會超出邊界 */
+}
+
+.text-decoration-line-through {
+    margin-right: 12px;
+}
+
+.hot-sales-title {
+    white-space: nowrap;
+    margin-bottom: 16px;
 }
 
 .overlay {
@@ -229,7 +237,41 @@ img {
     .pagination1 {
         padding: 32px 84px;
     }
+
+    .right {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    // .hot-sales .btn-loving {
+    //     width: 21.96px;
+    //     height: 21.96px;
+    // }
+
+    // 調整card文字在手機版本時過長導致換行
+    .hot-sales-title {
+        white-space: nowrap;
+        margin-bottom: 8px;
+    }
+
+    // 避免下方金額欄位也一起變同行
+    .text-gray-900 span {
+        display: block;
+        margin: 0;
+        /* 移除 margin */
+    }
+
+    .text-gray-900 span:first-child {
+        margin-bottom: 8px;
+        /* 設定 8px 的垂直間距 */
+    }
+
+    .text-decoration-line-through {
+        margin-right: 0px;
+    }
 }
+
+
 
 
 // section2樣式
