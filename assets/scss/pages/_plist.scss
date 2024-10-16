@@ -5,7 +5,7 @@
   width: 100%; /* 設計稿最大寬度 */
   height: 0 auto;
   backdrop-filter: blur(20px); /* 模糊效果 */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+  // box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 陰影效果 */
 }
 .breadcrumb-item + .breadcrumb-item::before {
   content: ">";
@@ -245,7 +245,7 @@ body {
   text-align: center; /* 讓內容居中顯示 */
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 卡片陰影 */
+  // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 卡片陰影 */
 }
 
 .product-image {

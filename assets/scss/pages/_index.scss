@@ -27,16 +27,6 @@
       color: $primary !important;
     }
   }
-  .btn-loving {
-    width: 40px;
-    height: 40px;
-    span {
-      &:hover {
-        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
-        color: $primary !important;
-      }
-    }
-  }
   .swiper-slide {
     margin: 0px;
   }
@@ -83,6 +73,16 @@
   &-content {
     @include mobile {
       font-size: 12px;
+    }
+  }
+}
+.btn-loving {
+  width: 40px;
+  height: 40px;
+  span {
+    &:hover {
+      font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      color: $primary !important;
     }
   }
 }
