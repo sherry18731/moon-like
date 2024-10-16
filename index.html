@@ -8,8 +8,8 @@
   <title>月幕 MOON LIKE | online shop</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />  <script type="module" crossorigin src="/moon-like/assets/main-cc8430ef.js"></script>
-  <link rel="stylesheet" href="/moon-like/assets/main-74266b8c.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />  <script type="module" crossorigin src="/moon-like/assets/main-ab55b850.js"></script>
+  <link rel="stylesheet" href="/moon-like/assets/main-b1b879c3.css">
 </head>
 
 <body>
@@ -168,12 +168,13 @@
     </section>
 
     <!-- 熱銷新品 -->
-    <!-- bug1：透明度遮罩問題，愛心也會吃到透明度-->
+    <!-- bug1：透明度遮罩問題，愛心也會吃到透明度 >> 再新增一層card做遮罩!?-->
     <!-- Q1：無法下stretched-link的class讓全card都吃到連結，因為下了stretched-link，hover被遮罩不會變色 -->
     <!-- Q2：在img沒有辦法做hover，會影響到收藏愛心無法有hover效果 -->
     <!-- Q3：swiper 在響應是由小拉大的時候商品照會位移而被遮擋，需要重整-->
     <section class="hot-sales container-fluid container-lg py-12 py-lg-30">
-      <h2 class="title-decorate position-relative text-center text-gray-800 mb-12"><span class="px-6">熱銷新品</span>
+      <h2 class="title-decorate position-relative text-center text-gray-800 mb-12"><span
+          class="bg-gray-200 px-6">熱銷新品</span>
       </h2>
       <div class="row mb-8">
         <div class="col">
@@ -181,18 +182,21 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide rounded-2">
                 <div class="card text-center position-relative">
+                  <!-- 商品圖片 -->
+                  <div class="card rounded-bottom-0">
+                    <a href="plist.html">
+                      <img src="/moon-like/assets/Item-1-16cb4843.png" class="card-img rounded-bottom-0" alt="商品照">
+                      <div class="overlay"></div> <!-- 半透明黑色背景層 -->
+                    </a>
+                  </div>
                   <!-- 收藏愛心 -->
-                  <!-- bug1 -->
                   <div
                     class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
                     <a href="#"><span class="material-symbols-outlined align-bottom text-gray-600 fw-light">
                         favorite
                       </span></a>
                   </div>
-                  <!-- 商品圖片 -->
-                  <a href="plist.html">
-                    <img src="/moon-like/assets/Item-1-16cb4843.png" class="card-img rounded-bottom-0 rounded-bottom-0" alt="商品照">
-                  </a>
+
                   <!-- 商品文字 -->
                   <div class="card-body">
                     <a href="plist.html">
@@ -208,6 +212,12 @@
               </div>
               <div class="swiper-slide rounded-2">
                 <div class="card text-center position-relative">
+                  <div class="card rounded-bottom-0">
+                    <a href="plist.html">
+                      <img src="/moon-like/assets/Item-2-c7a77619.png" class="card-img rounded-bottom-0" alt="商品照">
+                      <div class="overlay"></div>
+                    </a>
+                  </div>
                   <!-- 收藏愛心 -->
                   <div
                     class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
@@ -216,9 +226,7 @@
                       </span></a>
                   </div>
                   <!-- 商品圖片 -->
-                  <a href="plist.html">
-                    <img src="/moon-like/assets/Item-2-c7a77619.png" class="card-img rounded-bottom-0" alt="商品照">
-                  </a>
+
                   <!-- 商品文字 -->
                   <div class="card-body">
                     <a href="plist.html">
@@ -234,6 +242,13 @@
               </div>
               <div class="swiper-slide rounded-2">
                 <div class="card text-center position-relative">
+                  <!-- 商品圖片 -->
+                  <div class="card rounded-bottom-0">
+                    <a href="plist.html">
+                      <img src="/moon-like/assets/Item-3-1e428cbc.png" class="card-img rounded-bottom-0" alt="商品照">
+                      <div class="overlay"></div>
+                    </a>
+                  </div>
                   <!-- 收藏愛心 -->
                   <div
                     class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
@@ -241,10 +256,7 @@
                         favorite
                       </span></a>
                   </div>
-                  <!-- 商品圖片 -->
-                  <a href="plist.html">
-                    <img src="/moon-like/assets/Item-3-1e428cbc.png" class="card-img rounded-bottom-0" alt="商品照">
-                  </a>
+
                   <!-- 商品文字 -->
                   <div class="card-body">
                     <a href="plist.html">
@@ -260,6 +272,13 @@
               </div>
               <div class="swiper-slide rounded-2">
                 <div class="card text-center position-relative">
+                  <!-- 商品圖片 -->
+                  <div class="card rounded-bottom-0">
+                    <a href="plist.html">
+                      <img src="/moon-like/assets/Item-4-504de650.png" class="card-img rounded-bottom-0" alt="商品照">
+                      <div class="overlay"></div>
+                    </a>
+                  </div>
                   <!-- 收藏愛心 -->
                   <div
                     class="btn-loving d-flex align-items-center justify-content-center bg-white rounded-circle opacity-50 position-absolute top-0 end-0 mt-4 me-4">
@@ -267,10 +286,6 @@
                         favorite
                       </span></a>
                   </div>
-                  <!-- 商品圖片 -->
-                  <a href="plist.html">
-                    <img src="/moon-like/assets/Item-4-504de650.png" class="card-img rounded-bottom-0" alt="商品照">
-                  </a>
                   <!-- 商品文字 -->
                   <div class="card-body">
                     <a href="plist.html">
