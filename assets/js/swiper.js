@@ -5,7 +5,7 @@ const swiper1 = new Swiper(".indexSwiperItem", {
       768: {
         slidesPerView: 2,
         grid: {
-          rows: 2,
+          rows: 1,
           fill: "row"
         }
       },

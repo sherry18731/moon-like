@@ -60,7 +60,7 @@ header {
 }
 // 按照不同斷點的navbar向下推出空間
 .fixed-box {
-  height: 173px;
+  height: 101px;
   @include pad {
     height: 89px;
   }

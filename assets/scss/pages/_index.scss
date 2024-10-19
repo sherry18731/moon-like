@@ -39,7 +39,13 @@
       height: 168px;
     }
   }
+  .card-img {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 }
+
 // 關於水晶
 .about {
   &-img {
@@ -74,6 +80,9 @@
     @include mobile {
       font-size: 12px;
     }
+  }
+  .swiper-pagination-bullet-active {
+    background: $primary;
   }
 }
 .btn-loving {
